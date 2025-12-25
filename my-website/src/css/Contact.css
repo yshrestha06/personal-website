@@ -1,0 +1,45 @@
+.contacts {
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.icon-link {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  fill: #000;
+}
+
+.icon-link:hover {
+  background: #000;
+}
+
+.icon-link:hover .icon {
+  fill: #fff;
+}
+
+.icon-link {
+  background: none;
+  border: 2px solid #000;
+  cursor: pointer;
+}
