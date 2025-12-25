@@ -12,6 +12,19 @@ Full-stack personal website built with React and Spring Boot.
 - Java / Spring Boot
 - REST APIs
 
+## How to run locally
+
+### Backend
+```bash
+cd demo
+./mvnw spring-boot:run
+```
+### Frontend
+```bash
+cd my-website
+npm install
+npm start
+```
 
 
 
