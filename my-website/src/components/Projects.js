@@ -22,28 +22,12 @@ function Projects() {
         </div>
 
         <div className="project-card">
-          <h2>Project Two</h2>
+          <h2>Personal Website</h2>
           <p>
-            Short description of the project and what you learned from it.
-          </p>
-          <p className="tech">Tech: Python, FastAPI</p>
+            Full-stack personal website. </p>
+          <p className="tech">Tech: React, Spring Boot, REST API</p>
           <a
-            href="https://github.com/YOUR_GITHUB/project-two"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Project
-          </a>
-        </div>
-
-        <div className="project-card">
-          <h2>Project Three</h2>
-          <p>
-            Brief explanation of the project’s purpose.
-          </p>
-          <p className="tech">Tech: JavaScript, HTML, CSS</p>
-          <a
-            href="https://github.com/YOUR_GITHUB/project-three"
+            href="https://github.com/yshrestha06/personal-website"
             target="_blank"
             rel="noopener noreferrer"
           >
