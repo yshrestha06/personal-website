@@ -33,4 +33,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/email/:email", async (req, res) => {
+  try {
+    const { email } = req.params;
+
+    const contacts = await Contact.find({ email }).sort({ createdAt: -1 });
+    res.json(contacts);
+  } catch (err) {
+    res.status(500).json({ error: err.message});
+  }
+});
+
 module.exports = router;
