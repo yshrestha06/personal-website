@@ -15,7 +15,7 @@ function MessageForm() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("http://localhost:8080/api/messages", {
+      const res = await fetch("http://localhost:5000/api/contacts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
