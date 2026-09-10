@@ -2,7 +2,18 @@ const express = require("express");
 const router = express.Router();
 const Contact = require("../models/Contact");
 
-// POST: Save message
+// Simple shared-secret check so the GET routes below aren't world-readable.
+// Anyone who knows your MongoDB Atlas dashboard login already sees this data,
+// but the API itself shouldn't hand it out to whoever finds the URL.
+function requireAdminKey(req, res, next) {
+  const key = req.header("x-admin-key");
+  if (!process.env.ADMIN_KEY || key !== process.env.ADMIN_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  next();
+}
+
+// POST: Save message — stays public, this is the contact form submit
 router.post("/", async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -16,15 +27,15 @@ router.post("/", async (req, res) => {
 
     res.status(201).json({
       success: true,
-      data: contact
+      data: contact,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// GET: Fetch all messages
-router.get("/", async (req, res) => {
+// GET: Fetch all messages — now requires the admin key header
+router.get("/", requireAdminKey, async (req, res) => {
   try {
     const contacts = await Contact.find().sort({ createdAt: -1 });
     res.json(contacts);
@@ -33,14 +44,14 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/email/:email", async (req, res) => {
+router.get("/email/:email", requireAdminKey, async (req, res) => {
   try {
     const { email } = req.params;
 
     const contacts = await Contact.find({ email }).sort({ createdAt: -1 });
     res.json(contacts);
   } catch (err) {
-    res.status(500).json({ error: err.message});
+    res.status(500).json({ error: err.message });
   }
 });
 
