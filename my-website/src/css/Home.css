@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
-  padding: 80px 40px;
-  max-width: 1100px;
+  gap: 64px;
+  padding: 100px 40px 90px;
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -12,42 +12,110 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  animation: rise-in 0.7s ease both;
+}
+
+.pic-frame {
+  padding: 8px;
+  border: 1.5px solid var(--brass-500);
+  border-radius: 4px;
 }
 
 .profile-pic {
-  width: 260px;
-  height: 260px;
+  display: block;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #ddd;
+  border-radius: 2px;
 }
 
 .home-right {
   flex: 2;
+  animation: rise-in 0.7s ease 0.1s both;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin: 0 0 10px;
 }
 
 .home-right h1 {
-  margin-bottom: 16px;
-  font-size: 32px;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.home-right .lede {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 14px;
 }
 
 .home-right p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
+  color: var(--ink-soft);
   margin-bottom: 16px;
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 22px;
+  flex-wrap: wrap;
 }
 
 .resume-button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: black;
+  padding: 13px 26px;
+  background-color: var(--maroon-700);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
 }
 
 .resume-button:hover {
-  background-color:darkred;
+  background-color: var(--maroon-900);
+}
+
+.secondary-link {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--brass-500);
+  padding-bottom: 2px;
+}
+
+.secondary-link:hover {
+  color: var(--maroon-700);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .home {
+    flex-direction: column;
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .home-actions {
+    justify-content: center;
+  }
 }

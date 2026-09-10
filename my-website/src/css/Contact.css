@@ -1,45 +1,49 @@
 .contacts {
-  padding: 80px 40px;
-  max-width: 900px;
+  padding: 90px 40px 100px;
+  max-width: var(--content-width);
   margin: 0 auto;
   text-align: center;
+}
+
+.contacts h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
 }
 
 .icon-row {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  margin-top: 24px;
+  gap: 18px;
+  margin-top: 28px;
   flex-wrap: wrap;
 }
 
 .icon-link {
-  width: 56px;
-  height: 56px;
-  border: 2px solid #000;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid var(--maroon-700);
+  border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .icon {
-  width: 26px;
-  height: 26px;
-  fill: #000;
+  width: 24px;
+  height: 24px;
+  fill: var(--maroon-700);
+  transition: fill 0.2s ease;
 }
 
 .icon-link:hover {
-  background: #000;
+  background: var(--maroon-700);
+  transform: translateY(-2px);
 }
 
 .icon-link:hover .icon {
-  fill: #fff;
-}
-
-.icon-link {
-  background: none;
-  border: 2px solid #000;
-  cursor: pointer;
+  fill: var(--paper);
 }

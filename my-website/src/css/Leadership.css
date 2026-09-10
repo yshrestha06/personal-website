@@ -1,0 +1,111 @@
+.leadership {
+  padding: 80px 40px;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  background: var(--paper-raised);
+}
+
+.leadership h1 {
+  font-size: 30px;
+  margin-bottom: 44px;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 56px;
+}
+
+.col-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-faint);
+  margin-bottom: 20px;
+}
+
+.role-card {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.role-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.role-head h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin: 0;
+  color: var(--maroon-700);
+}
+
+.role-date {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.role-org {
+  font-size: 14.5px;
+  font-weight: 600;
+  margin: 4px 0 8px;
+}
+
+.role-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.honors-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.honors-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.honors-list li:first-child {
+  padding-top: 0;
+}
+
+.honors-list li:last-child {
+  border-bottom: none;
+}
+
+.honor-title {
+  font-weight: 600;
+  font-size: 15.5px;
+}
+
+.honor-detail {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--brass-500);
+}
+
+@media (max-width: 720px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

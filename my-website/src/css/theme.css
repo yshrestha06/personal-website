@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color */
+  --maroon-900: #3C0B18;
+  --maroon-700: #7A1330;
+  --maroon-600: #8F1938;
+  --maroon-500: #A32345;
+  --brass-500: #C89B3C;
+  --brass-300: #E0C783;
+  --paper: #FAF7F4;
+  --paper-raised: #F3ECE6;
+  --ink: #221418;
+  --ink-soft: #5B4A4E;
+  --ink-faint: #8B7A7E;
+  --hairline: rgba(34, 20, 24, 0.14);
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Layout */
+  --content-width: 920px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}

@@ -1,12 +1,14 @@
 import '../css/Header.css';
 
 function Header() {
-  return(
+  return (
     <header className="header">
-       <div className="logo">Yashaswi Shrestha</div>
+      <div className="logo">Yashaswi Shrestha</div>
       <nav className="nav">
         <button onClick={() => scrollTo("home")}>Home</button>
+        <button onClick={() => scrollTo("experience")}>Experience</button>
         <button onClick={() => scrollTo("projects")}>Projects</button>
+        <button onClick={() => scrollTo("leadership")}>Leadership</button>
         <button onClick={() => scrollTo("socials")}>Contact</button>
       </nav>
     </header>
@@ -15,7 +17,7 @@ function Header() {
 
 function scrollTo(id) {
   const section = document.getElementById(id);
-  section?.scrollIntoView({behavior: "smooth"});
+  section?.scrollIntoView({ behavior: "smooth" });
 }
 
 export default Header;

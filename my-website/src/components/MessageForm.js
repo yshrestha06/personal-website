@@ -15,7 +15,8 @@ function MessageForm() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/contacts", {
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+      const res = await fetch(`${API_URL}/api/contacts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
