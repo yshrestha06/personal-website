@@ -29,7 +29,7 @@ function Home() {
 
         <div className="home-actions">
           <a
-            href="/Resume_Yashaswi.pdf"
+            href="/Resume_SWE_Yashaswi.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-button"
